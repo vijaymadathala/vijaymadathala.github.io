@@ -1,0 +1,769 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+    //slides the element with class "menu_body" when paragraph with class "menu_head" is clicked 
+    $("#firstpane p.menu_head").click(function()
+    {
+        $(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+        $(this).siblings().css({backgroundImage:"url(left.png)"});
+    });
+    //slides the element with class "menu_body" when mouse is over the paragraph
+    $("#secondpane p.menu_head").mouseover(function()
+    {
+         $(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+         $(this).siblings().css({backgroundImage:"url(left.png)"});
+    });
+});
+</script>
+
+
+<link rel="stylesheet" href="css/circle.css">
+
+<!-- CSS for accordion menu--> 
+<style type="text/css">
+
+
+
+.clearfix:before,.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+			
+
+body{
+	
+	top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('img/blur_background2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    
+	
+}
+
+
+.menu_list {    
+    width: 70%px;
+	text-align:left;
+}
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    margin:1px;
+    font-weight:bold;
+    background: #eef4d3 url(left.png) center right no-repeat;
+}
+.menu_body {
+    display:none;
+}
+.menu_body a{
+  display:block;
+  color:#006699;
+  background-color:#EFEFEF;
+  padding-left:10px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.menu_body a:hover{
+  color: #000000;
+  text-decoration:underline;
+  }
+  
+
+</style>
+
+<style>
+
+
+body{
+	font-family:"Comic Sans MS";
+	font-size: 15px;
+	
+}
+
+.head{
+    width: 50px;
+    height: 60px;
+}
+
+
+.tabs-menu {
+  align: center;	
+  list-style: none;
+  padding: 0;
+  width: 40%;
+  margin: auto;
+}
+
+li  {
+    
+	display: inline;
+}
+
+li a {
+	
+    color: black;
+    text-align: center;
+    padding: 0px 14px;
+    text-decoration: none;
+	font-family:"Comic Sans MS";
+	font-size: 15px;
+	
+}
+
+li a:hover:not(.active) {
+    background-color: grey;
+	border-radius: 20px;
+	opacity: 0.5;
+}
+
+.current {
+    background-color: grey;
+	border-radius: 20px;
+}
+
+.tab-content {
+    
+    width: 80%;
+    padding: 40px;
+    display: none;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+#tab-1 {
+ display: block;   
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="head">
+</div>
+<div id="tabs-container">
+    <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">About Me</a></li>
+        <li><a href="#tab-2"> Education </a></li>
+        <li><a href="#tab-3"> Experience</a></li>
+        <li><a href="#tab-4"> Skills </a></li>
+		<li><a href="#tab-5"> Projects </a></li>
+		
+    </ul>
+    <div class="tab">
+        <div id="tab-1" class="tab-content" align:"center" style="width:70%">
+			
+			<p align="center" >
+			<img src="img/p1.png" style="width:300px; height:360px"> </img>
+			<h2> Vijaya Bhaskar Madathala </h2>
+			<span> <b> Business Intelligence Analyst , Data Scientist, ETL Developer, Business Analyst and Data Visualization Engineer  </b></span>
+			</p>
+		    <p style="text-align:left"> I am currently pursuing MASTERs in Computer Information Systems in Colorado State University, Fort Collins, CO, USA. My area of focus in MASTER'S in Business Intelligence, ETL Development, Data visualization and Data warehousing.  
+			<br/><br/>I have About 5 years of experience in Data warehousing, Data Analysis, Data Extraction, Data Validation, Data Collection, BI Reporting and Data Visualization areas on various tools and projects.
+			</p>
+			<p align="center"> <br/>
+			<a href="https://www.linkedin.com/in/vijayabhaskarmadathala" target="_blank"> Linkedin Profile </a> &nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="https://github.com/vijaymadathala" target="_blank"> Github Profile </a> &nbsp;&nbsp; | &nbsp;&nbsp;<a href="mailto:vibhas.jaykar@gmail.com?Subject=To Vijay%" target="_top">vibhas.jaykar@gmail.com</a>
+			</p>
+			
+        </div>
+        
+		<div id="tab-2" class="tab-content">
+		
+		<table cellspacing="10" cellpadding="10" width="90%">
+			<tr style="vertical-align: top;">
+				<td width="10%"><img src="img/csuLogo.png" style="width:80px; height:80px"> </img></td>
+				<td width="60%"> 
+				<b>Colorado State University </b> <br/> 
+				Masters, Computer Information Systems <br/><br/>
+				<b>Course work </b>: Business Intelligence,  Data Visualisation Using R, Python & Tableau ,Data Mining using SAS, Advanced Database Management, Project Management Program (PMP) Training, Software Development	 and Web Development using HTML, CSS, PHP & ASP .NET
+				
+				</td>
+				<td width="30%">
+				<img src="img/gradLogo.png" style="width:30px; height:30px" >	
+				&nbsp; Jan 2015 - May 2016  
+				
+				</td>
+			</tr>
+			</table>
+			<hr/>
+			<table cellspacing="10" cellpadding="10" width="90%">
+			<tr style="vertical-align: top;">
+				<td width="10%"><img src="img/gitamLogo.png" style="width:80px; height:80px"> </img></td>
+				<td width="60%"> 
+				<b>GITAM University, India </b> <br/> 
+				Bachelors, Electronics & Communications Engineering <br/><br/>
+				
+				-  Had done projects on Infrared Tracking System and Spy Robot <br/>
+				Course syllabus content are Major in Electronics and contains Micro Controller, Embedded Systems and VLSI etc. and Minor in Computer Science and contains Operating Systems, C, C++, Databases etc.
+
+				</td>
+				<td width="30%"> 
+				<img src="img/gradLogo.png" style="width:30px; height:30px" >	
+				&nbsp;August 2006 - May 2010</td>
+			</tr>
+		</table>
+		</p>
+		</div>
+		
+        <div id="tab-3" class="tab-content">
+            
+		<div class="menu_list" id="secondpane"> <!--Code for menu starts here-->
+		
+		 
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> Experience Summary - 5 Years<td> 
+		<td width="30%"> Oct 2010- Mar 2016<td>
+		</tr>
+		</table>
+		</p>
+		<div class="menu_body1">
+		•	Have been researching in academic course work on different visualizations (charts, interactive charts, maps, choropleths, cartograms, treemaps etc.) created from large complex datasets with new analytical tools and techniques using R, D3, Python and Tableau. <br/> 
+		•	About 5 years of proven professional experience in business analytics, reporting, ETL & BI Development and data visualization and During my experience I performed requirement gathering, business analysis, Data Analysis, Data Extraction, Data Validation, Data Collection, Data warehouse loading and BI Reporting.<br/>  
+		•	Strong understanding of data warehousing concepts, Database Design, OLAP, Normalization, Star schema and Snow Flake schema data models. And Implemented Cubes, BI Reporting, ETL components, Key Performance Indicators and dashboards for supporting business using various BI and ETL technologies.<br/> 
+		•	Proficient in defining Key Business Metrics, KPIs, modelling, dimensions, facts and hierarchies. <br/> 
+		•	Proficient in ETL processes such as creating Source/Target definitions, data cleansing, data extraction and data loading and perform transformations using ETL scripts in Data stage & SSIS.<br/> 
+		•	Proficient in visualization and reporting tools such as Tableau, OBIEE, SSRS &. Qlikview to analyze large datasets, create visually compelling and actionable interactive and ad hoc Reports and dashboards. <br/> 
+		•	Extensive experience in Microsoft office tools such as MS Access Databases, MS Excel (Pivot Tables, lookups, charts, functions & aggregations), MS Word, MS PowerPoint and MS Visio.<br/> 
+
+         </div>
+        <p class="menu_head"> 
+		<table>
+		<tr> 
+		<td width="70%"><b><font color='Blue'> BI Developer , Internship, JBS USA, Greely<td> 
+		<td width="30%"><font color='Blue'>  May 2015- Mar 2016<td>
+		</tr>
+		</table>
+		
+		</p>
+        <div class="menu_body">
+        <p><b><u> Projects </u> </b> <br/>
+	<b> Title: BI Team, JBS USA  </b><br/>
+	<b> Role: </b> BI Developer <br/>
+	<b> Technologies: </b> SAP Business Warehouse (BW) , SAP Data Services, Qlikview <br/>
+	<b> Perod: </b> May 2015 - Dec 2015 <br/>
+	<b> Description:</b>  <br/>
+	•	Extract raw data from transactional and other operational applications; transform it into information using SAP BW, SAP Data Services and Qlikview tools to reveal insights, which Help businesses make faster, more accurate, and actionable decisions across organizations to make valuable decisions. <br/>
+	•	Gather information and analyze the process, design process flow, design system solution architecture and write functional specifications to live operation projects.<br/> 
+	•	Created process flow diagrams, ER Diagrams using Microsoft Visio to fulfill business needs that comply with quality standards and meets functional requirements.   <br/>                                                                         
+
+	</p>
+		</div>
+        
+		<p class="menu_head">
+		<table><tr> 
+		<td width="70%"><b><font color='Blue'>  BI Data Analyst, Manthan Systems, Bangalore, India<td> 
+		<td width="30%"> <font color='Blue'> Feb 2014- Dec 2014<td>
+		</tr></table>
+		</p>
+		     
+		<div class="menu_body">
+		<p> <b><u> Projects </u> </b> <br/>
+	<b> Title: Marketing Analytics Team, Flipkart India Pvt. Ltd    </b><br/>
+	<b> Role: </b> BI Data Analyst <br/>
+	<b> Perod: </b> Oct 2014 - Dec 2014   <br/>
+	<b> Description:</b>  <br/>
+	•	Wrote scripts of Hive and Vertica in Big data to handle large and complex datasets.<br/>
+	•	Migrated email and push Notification Marketing dashboards from Qlikview to Big data architecture by writing SQL scripts in Hive and Vertica.<br/> 
+	•	Created Ad hoc reports, Dashboards, visualization charts in Qlikview based marketing analyst’s requirements.                     <br/>
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Spend Analysis, TFL  </b><br/>
+	<b> Role: </b> BI Analyst <br/>
+	<b> Perod: </b> Oct 2014 - Dec 2014   <br/>
+	<b> Description:</b> <br/>
+	•	Analyzed spend data on the source systems across 30+ boroughs in London, designed data model <br/>
+	•	Created Spend analysis reports using Microsoft Business Intelligence tools such as SSIS, SSAS and SSRS.<br/>
+	•	Automated the manual process of creating spend reports from 30 boroughs, which helped them to track spends to maximize decision making and executive visibility across all boroughs. <br/>                
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: OBI Upgradation, KOJ  </b><br/>
+	<b> Role: </b> BI Analyst <br/>
+	<b> Perod: </b> Feb 2014 - May 2014    <br/>
+	<b> Description:</b> <br/>
+	•	Analyzed the system of Oracle Business Intelligence Enterprise Edition (OBIEE) and upgraded from 10g to 11g.<br/> 
+	•	Set the custom configuration, corrected data and format issues to ensure reporting accuracy and quality. <br/>
+	•	Suggested enhancements to improve performance and implemented visualization reports in new instance.     <br/>       
+
+	</p>
+         </div>
+        
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> <font color='Blue'> ETL Support Lead, Wipro Technologies, Johannesburg, South Africa <td> 
+		<td width="30%"> <font color='Blue'> Mar 2013 - Jan 2014 <td>
+		</tr>
+		</table>
+		</p>
+		<div class="menu_body">
+		<p>
+		<b><u> Projects </u> </b> <br/>
+		<p>
+		<b> Title: Pre-Production, Data Services, SBSA   </b> <br/>
+		<b> Role: </b> ETL Support Lead <br/>
+		<b> Perod: </b> Mar 2013 - Jan 2014    <br/>
+		<b> Description:</b><br/> 
+		•	Development and tuning of ETL scripts in pre-production and make sure by testing all ETL scripts deployed to production works without any issues and with great performance. <br/>
+		•	Tuning of ETL & SQL scripts and monitoring performance of jobs and created reports in preproduction. <br/>
+		•	Analyze and suggest teams to optimize ETL scripts and maximize efficiencies of the jobs in production    <br/>                                                                                                                                                                              
+
+		</p>
+		</div>
+		
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> <font color='Blue'>BI Developer, Wipro Technologies, Banaglore, India<td> 
+		<td width="30%"> <font color='Blue'> Oct 2010 - Feb 2013 <td>
+		</tr>
+		</table>
+		</p>
+		        <div class="menu_body">
+
+		<p>
+		<b><u> Projects </u> </b> <br/>
+		<b> Title: Information System - Business Intelligence, Wipro Technologies, Bangalore   </b> <br/>
+		<b> Role: </b> ETL Support Lead <br/>
+		<b> Perod: </b> Oct 2010 - Feb 2013    <br/>
+		<b> Description:</b><br/> 
+		•	Analyze source systems and develop reporting solutions, dashboards and KPIs for Human Resources, Finance, Supply chain Management using OBIEE, Tableau and Data stage <br/> 
+		•	Developed Answers (ad-hoc querying, reports), Interactive Dashboards with drill-down capabilities (charts/tables/graphs) using OBIEE and Tableau. 	<br/> 
+		•	Configured Security Setup using LDAP authentication, object and data level security, implemented write back features and configured Agents (alerts) using OBIEE.<br/> 
+
+		</p>
+	
+         </div>
+		 
+		 
+		
+		
+		
+		</div>      <!--Code for menu ends here-->
+			
+        </div>
+		
+		
+        <div id="tab-4" class="tab-content">
+            <p>
+			<div class="clearfix">
+			
+			<table cellpadding="20" cellspacing="20">
+			<tr> 
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/>BI</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/>ETL</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/> OBIEE </span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>85%<br/>Tableau</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>85%<br/>Qlikview</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/> Data Stage  </span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+				<td>
+				<div class="c100 p90 small">
+				    <span>90%<br/>SSIS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/> SSRS  </span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+				<td>
+				<div class="c100 p90 small">
+				    <span>90%<br/>SSAS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			
+			<tr> 
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>R</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>60%<br/> SAP BW/DS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>80%<br/>Python</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>50%<br/>SAS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>Advanced Excel</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>Relational Databases</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>SQL</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/> Oracle </span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>SQL Server</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			<tr> 
+				<td> 
+				<div class="c100 p80 small green">
+				    <span>60%<br/>JAVA</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small green" >
+				    <span>90%<br/>PHP</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p95 small green">
+				    <span>80%<br/>HTML</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>80%<br/>CSS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>80%<br/>ASP.NET</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>90%<br/>MS Office Word</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p95 small green">
+				    <span>30%<br/>Hive</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+					<td> 
+				<div class="c100 p90 small green">
+				    <span>90%<br/>PowerPoint</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p95 small green">
+				    <span>90%<br/>Visio</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			</table>
+			
+			</div>
+			
+			</p>
+        </div>
+    </div>
+	
+	<div id="tab-5" class="tab-content" >
+	
+	<div style=" width:90%;text-align:left;">
+		
+	<p>
+	<b> Title: BI Team, JBS USA  </b><br/>
+	<b> Role: </b> BI Developer <br/>
+	<b> Technologies: </b> SAP Business Warehouse (BW) , SAP Data Services, Qlikview <br/>
+	<b> Perod: </b> May 2015 - Dec 2015 <br/>
+	<b> Description:</b>  <br/>
+	•	Extract raw data from transactional and other operational applications; transform it into information using SAP BW, SAP Data Services and Qlikview tools to reveal insights, which Help businesses make faster, more accurate, and actionable decisions across organizations to make valuable decisions. <br/>
+	•	Gather information and analyze the process, design process flow, design system solution architecture and write functional specifications to live operation projects.<br/> 
+	•	Created process flow diagrams, ER Diagrams using Microsoft Visio to fulfill business needs that comply with quality standards and meets functional requirements.   <br/>                                                                         
+
+	</p>
+	
+	<hr/>
+
+	<p>
+	<b> Title: Marketing Analytics Team, Flipkart India Pvt. Ltd    </b><br/>
+	<b> Role: </b> BI Data Analyst <br/>
+	<b> Perod: </b> Oct 2014 - Dec 2014   <br/>
+	<b> Description:</b>  <br/>
+	•	Wrote scripts of Hive and Vertica in Big data to handle large and complex datasets.<br/>
+	•	Migrated email and push Notification Marketing dashboards from Qlikview to Big data architecture by writing SQL scripts in Hive and Vertica.<br/> 
+	•	Created Ad hoc reports, Dashboards, visualization charts in Qlikview based marketing analyst’s requirements.                     <br/>
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Spend Analysis, TFL  </b><br/>
+	<b> Role: </b> BI Analyst <br/>
+	<b> Perod: </b> Oct 2014 - Dec 2014   <br/>
+	<b> Description:</b> <br/>
+	•	Analyzed spend data on the source systems across 30+ boroughs in London, designed data model <br/>
+	•	Created Spend analysis reports using Microsoft Business Intelligence tools such as SSIS, SSAS and SSRS.<br/>
+	•	Automated the manual process of creating spend reports from 30 boroughs, which helped them to track spends to maximize decision making and executive visibility across all boroughs. <br/>                
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: OBI Upgradation, KOJ  </b><br/>
+	<b> Role: </b> BI Analyst <br/>
+	<b> Perod: </b> Feb 2014 - May2014    <br/>
+	<b> Description:</b> <br/>
+	•	Analyzed the system of Oracle Business Intelligence Enterprise Edition (OBIEE) and upgraded from 10g to 11g.<br/> 
+	•	Set the custom configuration, corrected data and format issues to ensure reporting accuracy and quality. <br/>
+	•	Suggested enhancements to improve performance and implemented visualization reports in new instance.     <br/>       
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Pre-Production, Data Services, SBSA   </b> <br/>
+	<b> Role: </b> ETL Support Lead <br/>
+	<b> Perod: </b> Mar 2013 - Jan 2014    <br/>
+	<b> Description:</b><br/> 
+	•	Development and tuning of ETL scripts in pre-production and make sure by testing all ETL scripts deployed to production works without any issues and with great performance. <br/>
+	•	Tuning of ETL & SQL scripts and monitoring performance of jobs and created reports in preproduction. <br/>
+	•	Analyze and suggest teams to optimize ETL scripts and maximize efficiencies of the jobs in production    <br/>                                                                                                                                                                              
+
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Information System - Business Intelligence, Wipro Technologies, Bangalore   </b> <br/>
+	<b> Role: </b> ETL Support Lead <br/>
+	<b> Perod: </b> Oct 2010 - Feb 2013    <br/>
+	<b> Description:</b><br/> 
+	•	Analyze source systems and develop reporting solutions, dashboards and KPIs for Human Resources, Finance, Supply chain Management using OBIEE, Tableau and Data stage <br/> 
+	•	Developed Answers (ad-hoc querying, reports), Interactive Dashboards with drill-down capabilities (charts/tables/graphs) using OBIEE and Tableau. 	<br/> 
+	•	Configured Security Setup using LDAP authentication, object and data level security, implemented write back features and configured Agents (alerts) using OBIEE.<br/> 
+
+	</p>
+	
+	</div>
+	
+	
+    </div>    
+	
+</div>
+</body>
+
+</html>

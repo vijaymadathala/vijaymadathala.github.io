@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.sub-content
+{
+	height:80vh;
+	width: 100%;
+	
+}
+.head{
+    width: 50px;
+    height: 60px;
+}
+
+ul {
+  align: center;	
+  list-style: none;
+  padding: 0;
+  width: 40%;
+  margin: auto;
+}
+
+li {
+    
+	display: inline;
+}
+
+li a {
+	
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	text-font: Serif;
+	font-size: 12px;
+}
+
+li a:hover:not(.active) {
+    background-color: grey;
+	border-radius: 20px;
+	opacity: 0.5;
+}
+
+.active {
+    background-color: grey;
+	border-radius: 20px;
+}
+</style>
+
+<script>
+
+function showContent(idValue)
+{
+	var x=document.getElementsByClassName("active").id;
+	alert(x);
+	
+	
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div class="head">
+</div>
+
+<div class="nav">
+
+<ul>
+  <li><a  id="meLink" class="active" href="javascript:showContent('aboutMe')">ABOUT ME</a></li>
+  <li><a id="eduLink" href="javascript:showContent('education');">EDUCATION</a></li>
+  <li><a id="expLink" href="javascript:showContent('experience');">EXPERIENCE</a></li>
+  <li><a id="skillLink" href="javascript:showContent('skills');">SKILLS</a></li>
+  <li><a id="proLink" href="javascript:showContent('projects');">PROJECTS</a></li>
+</ul>
+
+</div>
+
+<div class="content">
+
+<div id="aboutMe" class="current"> aboutMe </div>
+<div id="education"> education </div>
+
+
+
+</div>
+
+</body>
+</html>
